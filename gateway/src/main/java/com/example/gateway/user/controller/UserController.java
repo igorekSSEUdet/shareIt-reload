@@ -14,7 +14,7 @@ import javax.validation.Valid;
 @Slf4j
 @RequiredArgsConstructor
 @RequestMapping("/users")
-public class UserController {//
+public class UserController {
 
     private final UserRemoteCommandImpl command;
 

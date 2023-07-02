@@ -1,6 +1,8 @@
 package com.example.gateway.item.service;
 
-import com.example.gateway.item.dto.*;
+import com.example.gateway.item.dto.ItemCreationRequestDto;
+import com.example.gateway.item.dto.ItemUpdateRequestDto;
+import com.example.gateway.item.dto.RequestCommentDto;
 import org.springframework.http.ResponseEntity;
 
 public interface ItemRemoteCommand {

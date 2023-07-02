@@ -1,7 +1,9 @@
 package com.example.gateway.item.service;
 
 import com.example.gateway.client.BaseClient;
-import com.example.gateway.item.dto.*;
+import com.example.gateway.item.dto.ItemCreationRequestDto;
+import com.example.gateway.item.dto.ItemUpdateRequestDto;
+import com.example.gateway.item.dto.RequestCommentDto;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;

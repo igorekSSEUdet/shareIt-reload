@@ -1,6 +1,8 @@
 package com.example.gateway.item.controller;
 
-import com.example.gateway.item.dto.*;
+import com.example.gateway.item.dto.ItemCreationRequestDto;
+import com.example.gateway.item.dto.ItemUpdateRequestDto;
+import com.example.gateway.item.dto.RequestCommentDto;
 import com.example.gateway.item.service.ItemRemoteCommand;
 import com.example.gateway.utills.UserHttpHeaders;
 import lombok.RequiredArgsConstructor;
