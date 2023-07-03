@@ -21,7 +21,7 @@ public class ItemRequestController {
     private final RequestService service;
 
     @PostMapping
-    public ItemRequestDto createRequest(@RequestBody @Valid RequestDto requestDto,
+    public ItemRequestDto createRequest(@RequestBody RequestDto requestDto,
                                         @RequestHeader(UserHttpHeaders.USER_ID) Long userId) {
         log.info("Received a POST request for the endpoint /requests with userId_{}", userId);
         return service.createRequest(requestDto, userId);

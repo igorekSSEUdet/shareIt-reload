@@ -21,7 +21,7 @@ public class ItemController {
 
     @PostMapping
     public ItemDto addItem(@RequestHeader(UserHttpHeaders.USER_ID) Long ownerId,
-                           @RequestBody @Valid ItemCreationRequestDto itemDto) {
+                           @RequestBody ItemCreationRequestDto itemDto) {
         log.info("Received a POST request for the endpoint /items with userId_{}", ownerId);
         return itemService.addItem(itemDto, ownerId);
     }
@@ -59,7 +59,7 @@ public class ItemController {
 
     @PostMapping("/{itemId}/comment")
     public CommentDto addComment(@RequestHeader(UserHttpHeaders.USER_ID) Long userId,
-                                 @RequestBody @Valid RequestCommentDto comment,
+                                 @RequestBody RequestCommentDto comment,
                                  @PathVariable Long itemId) {
         log.info("Received a POST request for the endpoint /items/{itemId}/comment with userId_{}", userId);
         return commentService.addComment(comment, userId, itemId);

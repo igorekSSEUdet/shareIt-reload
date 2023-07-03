@@ -21,7 +21,7 @@ public class BookingController {
 
     @PostMapping
     public BookingDto addBooking(@RequestHeader(UserHttpHeaders.USER_ID) Long userId,
-                                 @RequestBody @Valid BookingCreationRequestDto bookingDto) {
+                                 @RequestBody BookingCreationRequestDto bookingDto) {
         log.info("Received a POST request for the endpoint /bookings with userId_{}", userId);
         return bookingService.addBooking(bookingDto, userId);
     }

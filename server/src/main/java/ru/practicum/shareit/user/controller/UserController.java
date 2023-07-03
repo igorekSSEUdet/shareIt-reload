@@ -19,14 +19,14 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping
-    public UserDto addUser(@RequestBody @Valid UserCreationRequestDto userDto) {
+    public UserDto addUser(@RequestBody UserCreationRequestDto userDto) {
         log.info("Received a POST request for the endpoint /users");
         return userService.addUser(userDto);
     }
 
     @PatchMapping("/{userId}")
     public UserDto updateUser(@PathVariable Long userId,
-                              @RequestBody @Valid UserUpdateRequestDto userDto) {
+                              @RequestBody UserUpdateRequestDto userDto) {
         log.info("Received a PATCH request for the endpoint /users/{userId} with userId_{}", userId);
         return userService.updateUser(userDto, userId);
     }
